@@ -1,0 +1,114 @@
+###
+###
+### Authentication
+POST http://127.0.0.1:8000/user/login/
+Content-Type: application/json
+
+{"username" : "exam-generator-001", "password" : "123@123a"}
+###
+POST http://127.0.0.1:8000/user/signup/
+Content-Type: application/json
+
+{"username" : "exam-generator-001", "password" : "123@123a", "email": "exam-generator-002@fsb.edu.vn", "role" : "EXAM_GENERATOR"}
+###
+GET  http://127.0.0.1:8000/user/test_token/
+Content-Type: application/json
+Authorization: Token 3ba9d658b552bbc233446dc9dc3c609b869c01ba
+
+{}
+###
+POST http://127.0.0.1:8000/user/change_password/
+Content-Type: application/json
+Authorization: Token 3ba9d658b552bbc233446dc9dc3c609b869c01ba
+
+{"old_password" : "123@123x", "new_password" : "123@123a"}
+###
+###
+###
+### Main function
+### ----------Subject-------------------------
+POST http://127.0.0.1:8000/exam/subject/
+Content-Type: application/json
+Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
+
+{
+    "name" : "Physical"
+}
+
+###
+GET http://127.0.0.1:8000/exam/subject/
+Content-Type: application/json
+Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
+
+{
+
+}
+
+### ----------Questions-------------------------
+POST http://127.0.0.1:8000/exam/question/create/
+Content-Type: application/json
+Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
+
+{
+    "blob_name" : "Template.docx",
+    "container_name" : "asm-g2-docx-container"
+}
+###
+GET  http://127.0.0.1:8000/exam/questions/
+Content-Type: application/json
+Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
+
+{}
+
+### ----------Exams-------------------------
+GET http://127.0.0.1:8000/exam/exams/
+Content-Type: application/json
+Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
+
+{}
+
+###
+GET http://127.0.0.1:8000/exam/exams/5/
+Content-Type: application/json
+Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
+
+{}
+###
+POST http://127.0.0.1:8000/exam/exam/
+Content-Type: application/json
+Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
+
+{
+    "name": "Exam-002",
+    "duration": "02:00:00",
+    "number_of_questions": 2,
+    "subject" : 2
+}
+
+### ----------Calendar-------------------------
+GET http://127.0.0.1:8000/exam/calendars/
+Content-Type: application/json
+Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
+
+{
+    
+}
+###
+POST http://127.0.0.1:8000/exam/calendars/
+Content-Type: application/json
+Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
+
+{
+    "start_time": "2024-08-04T17:47:00Z",
+    "exam": 5
+}
+
+###----------------------GEN AI----------------------
+POST http://127.0.0.1:8000/exam/questions/advice/
+Content-Type: application/json
+Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
+
+{
+     
+}
+
