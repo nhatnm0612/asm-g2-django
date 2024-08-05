@@ -9,9 +9,5 @@ class User(AbstractUser):
         TIME_SETTER = "TIME_SETTER", "time-setter"
         EXAM_GENERATOR = "EXAM_GENERATOR", "exam-generator"
         STUDENT = "STUDENT", "student"
-<<<<<<< HEAD
-
-=======
->>>>>>> a4ec8ce (first commit)
     base_role = Role.ADMIN
     role = models.CharField(max_length=50, choices=Role.choices)
