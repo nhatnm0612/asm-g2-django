@@ -86,7 +86,7 @@ def extract_docx_data(container_name: str, blob_name: str) -> tuple[list[list[st
                     current_question = [row_data[1]]
                 else:
                     current_question.append(row_data[1])
-                    current_question.append(blob_paths[index])
+            current_question.append(blob_paths[index])
             question_lst.append(current_question)
         print(question_lst)
 

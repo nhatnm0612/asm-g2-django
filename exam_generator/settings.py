@@ -40,11 +40,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework.authtoken",
     "user",
-<<<<<<< HEAD
-]
-=======
     'exam']
->>>>>>> a4ec8ce (first commit)
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -90,17 +86,10 @@ WSGI_APPLICATION = "exam_generator.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "mssql",
-<<<<<<< HEAD
-        "NAME": "mse24_group3_db",
-        "USER": "admin-root",
-        "PASSWORD": "Group3member",  # Replace with your actual password
-        "HOST": "tcp:mse24-db-group3.database.windows.net,1433",
-=======
         "NAME": "asm-g2-db",
         "USER": "admin-root",
         "PASSWORD": "Group2member",  # Replace with your actual password
         "HOST": "tcp:mse24-db-group2.database.windows.net,1433",
->>>>>>> a4ec8ce (first commit)
         "OPTIONS": {
             "driver": "ODBC Driver 18 for SQL Server",
         },
@@ -152,8 +141,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = "user.User"
 
 CSRF_COOKIE_HTTPONLY = True
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a4ec8ce (first commit)

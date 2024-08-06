@@ -15,18 +15,6 @@ Including another URLconf
 """
 
 from django.contrib import admin
-<<<<<<< HEAD
-from . import views
-from django.urls import path, re_path
-
-urlpatterns = [
-    re_path("login", views.login),
-    re_path("signup", views.sign_up),
-    re_path("test_token", views.test_token),
-    re_path("change_password", views.change_password),
-    path("admin/", admin.site.urls),
-]
-=======
 from django.urls import path, include  
 
 urlpatterns = [
@@ -35,4 +23,3 @@ urlpatterns = [
     path('exam/', include('exam.urls'))
 ]
 
->>>>>>> a4ec8ce (first commit)

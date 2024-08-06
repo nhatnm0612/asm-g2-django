@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-from django.shortcuts import render
-
-# Create your views here.
-=======
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.request import Request
@@ -81,4 +76,3 @@ def change_password(request):
         return Response({"detail": "Password changed successfully."})
     else:
         return Response({"detail": "Method not allowed"}, status=status.HTTP_405_METHOD_NOT_ALLOWED)  # Handle non-POST requests
->>>>>>> a4ec8ce (first commit)
