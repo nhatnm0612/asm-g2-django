@@ -23,7 +23,7 @@ class ExamSerializers(serializers.ModelSerializer):
 class SubjectSerializers(serializers.ModelSerializer):
     class Meta:
         model = Subject
-        fields = ['name']
+        fields = ['id','name']
 
 class ExamQuestionMapSerializers(serializers.ModelSerializer):
     class Meta:

@@ -1,23 +1,23 @@
 ###
 ###
 ### Authentication
-POST http://asm-g2-django.azurewebsites.net/user/login/
+POST http://127.0.0.1:8000/user/login/
 Content-Type: application/json
 
 {"username" : "exam-generator-001", "password" : "123@123a"}
 ###
-POST http://asm-g2-django.azurewebsites.net/user/signup/
+POST http://127.0.0.1:8000/user/signup/
 Content-Type: application/json
 
 {"username" : "exam-generator-001", "password" : "123@123a", "email": "exam-generator-002@fsb.edu.vn", "role" : "EXAM_GENERATOR"}
 ###
-GET  http://asm-g2-django.azurewebsites.net/user/test_token/
+GET  http://127.0.0.1:8000/user/test_token/
 Content-Type: application/json
 Authorization: Token 3ba9d658b552bbc233446dc9dc3c609b869c01ba
 
 {}
 ###
-POST http://asm-g2-django.azurewebsites.net/user/change_password/
+POST http://127.0.0.1:8000/user/change_password/
 Content-Type: application/json
 Authorization: Token 3ba9d658b552bbc233446dc9dc3c609b869c01ba
 
@@ -27,7 +27,7 @@ Authorization: Token 3ba9d658b552bbc233446dc9dc3c609b869c01ba
 ###
 ### Main function
 ### ----------Subject-------------------------
-POST http://asm-g2-django.azurewebsites.net/exam/subject/
+POST http://127.0.0.1:8000/exam/subject/
 Content-Type: application/json
 Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
 
@@ -36,7 +36,7 @@ Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
 }
 
 ###
-GET http://asm-g2-django.azurewebsites.net/exam/subject/
+GET http://127.0.0.1:8000/exam/subject/
 Content-Type: application/json
 Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
 
@@ -45,7 +45,7 @@ Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
 }
 
 ### ----------Questions-------------------------
-POST http://asm-g2-django.azurewebsites.net/exam/question/create/
+POST http://127.0.0.1:8000/exam/question/create/
 Content-Type: application/json
 Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
 
@@ -54,27 +54,27 @@ Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
     "container_name" : "asm-g2-docx-container"
 }
 ###
-GET  http://asm-g2-django.azurewebsites.net/exam/questions/
+GET  http://127.0.0.1:8000/exam/questions/
 Content-Type: application/json
 Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
 
 {}
 
 ### ----------Exams-------------------------
-GET http://asm-g2-django.azurewebsites.net/exam/exams/
+GET http://127.0.0.1:8000/exam/exams/
 Content-Type: application/json
 Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
 
 {}
 
 ###
-GET http://asm-g2-django.azurewebsites.net/exam/exams/5/
+GET http://127.0.0.1:8000/exam/exams/5/
 Content-Type: application/json
 Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
 
 {}
 ###
-POST http://asm-g2-django.azurewebsites.net/exam/exam/
+POST http://127.0.0.1:8000/exam/exam/
 Content-Type: application/json
 Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
 
@@ -86,7 +86,7 @@ Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
 }
 
 ### ----------Calendar-------------------------
-GET http://asm-g2-django.azurewebsites.net/exam/calendars/
+GET http://127.0.0.1:8000/exam/calendars/
 Content-Type: application/json
 Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
 
@@ -94,7 +94,7 @@ Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
     
 }
 ###
-POST http://asm-g2-django.azurewebsites.net/exam/calendars/
+POST http://127.0.0.1:8000/exam/calendars/
 Content-Type: application/json
 Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
 
@@ -104,7 +104,7 @@ Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
 }
 
 ###----------------------GEN AI----------------------
-POST http://asm-g2-django.azurewebsites.net/exam/questions/advice/
+POST http://127.0.0.1:8000/exam/questions/advice/
 Content-Type: application/json
 Authorization: Token 9ae553ed6d5f5853c6fb9b655b3708706bbbef5d
 
